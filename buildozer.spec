@@ -1,20 +1,20 @@
-
 [app]
 title = JARVIS V6 ONLINE
 package.name = jarvisonline
-package.domain = com.tonystark.jarvisonline
-source.dir = .
-source.include_exts = py,png,jpg,kv,atlas
+package.domain = com.junior.jarvisonline
+source.dir =.
+source.include_exts = py,png,jpg,kv,atlas,json
 version = 6.0
-requirements = python3,kivy,requests,googlesearch-python,certifi,charset-normalizer,urllib3,idna
+requirements = python3,kivy==2.3.0,requests,urllib3,certifi,charset-normalizer,idna
 orientation = portrait
-fullscreen = 0
-android.permissions = INTERNET,ACCESS_NETWORK_STATE
-android.api = 33
-android.minapi = 21
-android.ndk = 25b
-android.accept_sdk_license_agreement = True
 
 [buildozer]
 log_level = 2
-warn_on_root = 0
+
+[app:android]
+android.permissions = INTERNET,RECORD_AUDIO,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,MICROPHONE
+android.api = 33
+android.minapi = 21
+android.ndk = 25b
+android.accept_sdk_license_agreements = True
+p4a.bootstrap = sdl2
